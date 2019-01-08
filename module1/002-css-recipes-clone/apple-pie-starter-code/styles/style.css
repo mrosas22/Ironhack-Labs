@@ -1,0 +1,48 @@
+.topPage {
+    margin: 100px;
+    background-image: url('/images/apple-pie.jpg'); 
+    height: 620px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.recipeTitle {
+    margin: auto;
+    padding-top: 150px;
+    font-size: 80px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+}
+
+.bodyPage{
+    border-bottom: 1px rgb(155, 155,155)
+
+}
+.recipeParagraph {
+    padding: 0px 280px 10px;
+    display: block;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    border-bottom: 1px rgb(155, 155,155)
+}
+.recipeInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subTitle-1 {
+    padding: 20px 280px 10px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.recipeList{
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: normal; 
+}
