@@ -1,0 +1,32 @@
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 260px;
+    height: auto;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 280px;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+.container {
+    float: left;
+}
+  
+form{
+    display: block;
+    margin-top: 0em;
+}
