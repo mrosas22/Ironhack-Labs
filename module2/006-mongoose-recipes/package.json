@@ -1,7 +1,6 @@
 {
   "name": "006-mongoose-recipes",
   "version": "1.0.0",
-  "description": "",
   "main": "data.js",
   "scripts": {
     "start": "nodemon recipes.js",
@@ -11,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "mongoose": "^5.2.14"
-  }
+  },
+  "description": ""
 }
