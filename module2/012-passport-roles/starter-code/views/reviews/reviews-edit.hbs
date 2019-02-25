@@ -1,0 +1,6 @@
+<p>Add a review</p>
+<form action="/reviews/{{review._id}}/edit" method="post">
+    <label for="">Review:</label><br>
+    <textarea name="comment" value="{{review.comment}}"></textarea><br>
+    <button type="submit">ADD</button>
+</form>

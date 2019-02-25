@@ -1,0 +1,47 @@
+<h1>{{room.name}}</h1>
+{{!-- <h2>{{book.author.firstName}} {{book.author.lastName}}</h2> --}}
+<p>Description: {{room.description}}</p>
+{{#if room.imageUrl}}
+  <img src="{{room.imageUrl}}" alt="" width="300">
+{{else}}
+  <p>The room doesn't have an image</p>
+{{/if}}
+<br>
+<h5>Posted by: {{room.owner.fullName}}</h5>
+{{#if room.isOwner}}
+{{!-- Edit Route --}}
+  <form action="/rooms/{{room._id}}/edit">
+    <button type="submit">EDIT</button><br>
+  </form>
+  {{!-- Delete Route --}}
+  <form action="/rooms/{{room._id}}/delete" method="POST">
+    <button type="submit">DELETE</button><br>
+  </form>
+{{/if}}
+<a href="/rooms">Return</a>
+{{!-- create review --}}
+
+{{#unless room.isOwner}}
+  <p>Add a review</p>
+  <form action="/rooms/{{room._id}}/add-review" method="post">
+    <label for="">Review:</label><br>
+    <textarea name="comment"></textarea><br>
+    <button type="submit">ADD</button>
+  </form>
+{{/unless}}
+<h2>Reviews</h2>
+{{#each room.reviews}}
+  <div class="review-item">
+    <p>{{this.comment}}</p>
+    <span><b>By:</b> {{this.user.fullName}}</span>
+  </div>
+  {{#if this.canBeChanged}}
+    <form action="/reviews/{{this._id}}/edit" method="GET">
+      <button type="submit">EDIT</button>
+    </form>
+    <form action="/reviews/{{this._id}}/delete" method="POST">
+      <button type="submit">DELETE</button>
+    </form>
+  {{/if}}
+{{/each}}
+
