@@ -123,29 +123,6 @@ router.post('/:id/delete', (req, res, next) =>{
     .catch(error => console.log('error while deleting the room: ', error))
 })
 
-//Create reviews ====> //localhost:3000/rooms/reviews/add?id=5c6de4139681fb1757503f20
-// router.post('/reviews/add/:id', isLoggedIn, (req, res, next) =>{
-//   console.log('The review of the room is: ', req.body)
-//   const newPost = {
-//     user   : req.user._id,
-//     comment: req.body.comment,
-//     canBeChanged: false
-//   }
-//   Review.create(newPost)
-//     .then(review =>{
-//       Room.findById(req.params.id)
-//         .then(foundRoom =>{
-//           foundRoom.reviews.push(review._id)
-//           foundRoom.save()
-//             .then(() =>{
-//               res.redirect(`/rooms/${foundRoom._id}`);
-//             })
-//             .catch(error => next(error))
-//         })
-//         .catch(error => next(error))
-//     })
-//     .catch(error => console.log('Error while saving review: ', error))
-// })
 
 function isLoggedIn(req, res, next){
   if(req.user){
