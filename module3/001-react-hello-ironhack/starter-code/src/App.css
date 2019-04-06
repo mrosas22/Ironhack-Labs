@@ -30,3 +30,9 @@
     display: flex;
     justify-content: space-between
 }
+
+.instafeed-container {
+    width: 23.000000% !important;
+    padding-top: 20.000000% !important;
+    
+}
